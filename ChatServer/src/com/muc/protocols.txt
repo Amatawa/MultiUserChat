@@ -13,3 +13,9 @@ User & Server
 
     * direct messages
     * broadcast messages
+
+Commands:
+
+    login <user> <password>
+
+    logoff
