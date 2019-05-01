@@ -1,0 +1,7 @@
+User & Server
+
+1. User --> Server
+
+2. Server --> User
+
+3. User --> User
