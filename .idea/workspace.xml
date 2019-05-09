@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e73cefa-fdab-4460-9d6d-1cfe4abed24f" name="Default Changelist" comment="new class Server&#10;Refactor code from Server main into Server">
-      <change afterPath="$PROJECT_DIR$/ChatServer/src/com/muc/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4e73cefa-fdab-4460-9d6d-1cfe4abed24f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatClient/ChatClient.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatClient/ChatClient.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer/ChatServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/ChatServer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/muc/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/muc/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChatServer/src/com/muc/ServerWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/muc/ServerWorker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ChatServer/com/muc/ServerMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ChatServer/com/muc/ServerMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChatServer/src/com/muc/protocols.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ChatServer/src/com/muc/protocols.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="135">
               <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -38,14 +34,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="35" selection-end-column="9" />
+            <state relative-caret-position="510">
+              <caret line="38" selection-start-line="38" selection-end-line="41" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#74#75#0" expanded="true" />
-                <element signature="e#117#118#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#1124#1125#0" expanded="true" />
+                <element signature="e#1150#1151#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,13 +48,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/ServerWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-277">
-              <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+            <state relative-caret-position="293">
+              <caret line="117" column="39" lean-forward="true" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1951#1952#0" expanded="true" />
-                <element signature="e#1979#1980#0" expanded="true" />
+                <element signature="e#2439#2440#0" expanded="true" />
+                <element signature="e#2460#2461#0" expanded="true" />
+                <element signature="e#4158#4159#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/protocols.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -74,6 +78,11 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>getWorkerList</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
@@ -83,17 +92,16 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ChatServer/src/com/muc/protocols.txt" />
         <option value="$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java" />
         <option value="$PROJECT_DIR$/ChatServer/src/com/muc/Server.java" />
+        <option value="$PROJECT_DIR$/ChatServer/src/com/muc/protocols.txt" />
         <option value="$PROJECT_DIR$/ChatServer/src/com/muc/ServerWorker.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-1" />
-    <option name="width" value="1920" />
-    <option name="height" value="580" />
+    <option name="width" value="959" />
+    <option name="height" value="1159" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -101,6 +109,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,7 +144,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -270,14 +278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1556905462780</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="new class Server&#10;Refactor code from Server main into Server">
+      <created>1556909754170</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1556909754170</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1160" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19210246" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19423692" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -316,7 +331,8 @@
     <MESSAGE value="Made comments to explain code" />
     <MESSAGE value="User login w/ password function implemented" />
     <MESSAGE value="new class Server&#10;Refactor code from Server main into Server" />
-    <option name="LAST_COMMIT_MESSAGE" value="new class Server&#10;Refactor code from Server main into Server" />
+    <MESSAGE value="All the catching up. will add comments on next commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="All the catching up. will add comments on next commit" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/ChatClient/ChatClient.iml">
@@ -331,7 +347,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/ServerMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="135">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -339,35 +355,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/Server.java">
+    <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/protocols.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="35" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#74#75#0" expanded="true" />
-            <element signature="e#117#118#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="330">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/protocols.txt">
+    <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/Server.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="510">
+          <caret line="38" selection-start-line="38" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChatServer/src/com/muc/ServerWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-277">
-          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="293">
+          <caret line="117" column="39" lean-forward="true" selection-start-line="117" selection-start-column="39" selection-end-line="117" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1951#1952#0" expanded="true" />
-            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="e#2439#2440#0" expanded="true" />
+            <element signature="e#2460#2461#0" expanded="true" />
+            <element signature="e#4158#4159#0" expanded="true" />
           </folding>
         </state>
       </provider>
