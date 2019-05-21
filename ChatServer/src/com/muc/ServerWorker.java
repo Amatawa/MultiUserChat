@@ -38,7 +38,7 @@ public class ServerWorker extends Thread {
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         String line;
         while (( line = reader.readLine()) != null) {
-            String[] tokens = StringUtils.split(line);
+            String[] tokens = StringUtils.split(line, null, 3);
             if (tokens != null && tokens.length > 0) {
                 String cmd = tokens[0];
                 if ("logoff".equals(cmd) || "quit".equalsIgnoreCase(line)) { // Quits chat
@@ -112,7 +112,7 @@ public class ServerWorker extends Thread {
         server.removeWorker(this);
         List<ServerWorker> workerList = server.getWorkerList();
 
-        String onlineMsg = "offline" + login + "\n";
+        String onlineMsg = "offline " + login + "\n";
         for (ServerWorker worker : workerList) {
             if (!login.equals(worker.getLogin())) {
                 worker.send(onlineMsg);
@@ -132,17 +132,17 @@ public class ServerWorker extends Thread {
 
             if ((login.equals("guest") && password.equals("guest"))
                 || (login.equals("jim") && password.equals("jim"))) {
-                String msg = "ok login \n";
+                String msg = "ok login\n";
                 outputStream.write(msg.getBytes());
                 this.login = login;
-                System.out.println("User logged in successfully: " + login);
+                System.out.println("User logged in successfully: " + login + "\n");
 
 
                 List<ServerWorker> workerList = server.getWorkerList();
                 for (ServerWorker worker: workerList){
                     if (worker.getLogin() != null) {
                         if(!login.equals(worker.getLogin())) {
-                            String msg2 = "online " + worker.getLogin();
+                            String msg2 = "online " + worker.getLogin() + "\n";
                             worker.send(msg2);
                         }
                     }
@@ -160,6 +160,7 @@ public class ServerWorker extends Thread {
                 } else {
                     String msg = "error login \n";
                     outputStream.write(msg.getBytes());
+                    System.err.println("login failed for " + login);
                 }
             }
         }

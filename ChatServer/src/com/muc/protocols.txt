@@ -20,4 +20,13 @@ Commands:
 
     logoff
 
-    msg <user> text...
+    msg <user> body...
+    guest: "mad jim Hello world" <-- sent
+    jim: "msg guest Hello world" <-- received
+
+
+    #topic <-- chatroom / group chat
+    join #topic
+    leave #topic
+    send: maf #topic body
+    receive: msg #topic<login> body

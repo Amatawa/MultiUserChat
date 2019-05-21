@@ -16,5 +16,14 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES />
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/Downloads/mysql-connector-java-5.1.47.zip!/mysql-connector-java-5.1.47/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>
