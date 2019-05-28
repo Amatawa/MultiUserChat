@@ -17,6 +17,11 @@ public class ChatClient {
     private ArrayList<UserStatusListener> userStatusListeners = new ArrayList<>();
     private ArrayList<MessageListener> messageListeners = new ArrayList<>();
 
+    /**
+     * connects client to server automatically as guest
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         ChatClient client = new ChatClient("localhost", 8818);
         client.addUserStatusListener(new UserStatusListener() {
@@ -54,18 +59,35 @@ public class ChatClient {
         }
     }
 
-    private void msg(String sendTo, String msgBody) throws IOException {
+    /**
+     * sends a message (msgBody) to your intended recipient (sendTo)
+     * @param sendTo who you are sending the message to
+     * @param msgBody body of the message
+     * @throws IOException
+     */
+    public void msg(String sendTo, String msgBody) throws IOException {
         String cmd = "msg " + sendTo + " " + msgBody + "\n";
         serverOut.write(cmd.getBytes());
     }
 
-    private void logoff() throws IOException {
+    /**
+     * logs off the user
+     * @throws IOException
+     */
+    public void logoff() throws IOException {
         String cmd = "logoff\n";
         serverOut.write(cmd.getBytes());
 
     }
 
-    private boolean login(String login, String password) throws IOException {
+    /**
+     * logs the user in
+     * @param login user name
+     * @param password
+     * @return
+     * @throws IOException
+     */
+    public boolean login(String login, String password) throws IOException {
         String cmd = "login " + login + " " + password + "\n";
         serverOut.write(cmd.getBytes());
         String response = bufferedIn.readLine();
@@ -79,6 +101,9 @@ public class ChatClient {
         }
     }
 
+    /**
+     * Lets multiple users log in at once
+     */
     private void startMessageReader() {
         Thread t = new Thread() {
             @Override
@@ -89,6 +114,9 @@ public class ChatClient {
         t.start();
     }
 
+    /**
+     * reads message from terminal or putty if user is online.
+     */
     private void readMessageLoop()  {
         try {
             String line;
@@ -116,6 +144,10 @@ public class ChatClient {
         }
     }
 
+    /**
+     * sends message
+     * @param tokensMsg
+     */
     private void handleMessage(String[] tokensMsg) {
         String login = tokensMsg[1];
         String msgBody = tokensMsg[2];
@@ -125,6 +157,10 @@ public class ChatClient {
         }
     }
 
+    /**
+     * tells when user is offline
+     * @param tokens
+     */
     private void handleOffline(String[] tokens) {
         String login = tokens[1];
         for ( UserStatusListener listener : userStatusListeners){
@@ -132,6 +168,10 @@ public class ChatClient {
         }
     }
 
+    /**
+     * tells when user is offline
+     * @param tokens
+     */
     private void handleOnline(String[] tokens) {
         String login = tokens[1];
         for ( UserStatusListener listener : userStatusListeners){
@@ -139,7 +179,11 @@ public class ChatClient {
         }
     }
 
-    private boolean connect() {
+    /**
+     * tells user if they connect
+     * @return
+     */
+    public boolean connect() {
         try {
             this.socket = new Socket(serverName, serverPort);
             System.out.println("Client port is " + socket.getLocalPort());
@@ -153,22 +197,44 @@ public class ChatClient {
         return false;
     }
 
+    /**
+     * sets up server with name and port
+     * @param serverName
+     * @param serverPort
+     */
     public ChatClient(String serverName, int serverPort) {
         this.serverName = serverName;
         this.serverPort = serverPort;
     }
 
+    /**
+     * adds user online
+     * @param listener
+     */
     public void addUserStatusListener(UserStatusListener listener){
         userStatusListeners.add(listener);
     }
 
+    /**
+     * removes user online
+     * @param listener
+     */
     public void removeUserStatusListener(UserStatusListener listener){
         userStatusListeners.remove(listener);
     }
 
+    /**
+     * adds listener for messages coming from other user
+     * @param listener
+     */
     public void addMessageListener(MessageListener listener) {
         messageListeners.add(listener);
     }
+
+    /**
+     * removes listener for messages coming from other user
+     * @param listener
+     */
     public void removeMessageListener(MessageListener listener) {
         messageListeners.remove(listener);
     }
